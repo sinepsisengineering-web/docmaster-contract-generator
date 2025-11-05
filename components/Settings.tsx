@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import type { MarkerValue } from '../types';
+import Updater from './Updater'; // 1. Импортируем наш новый компонент
 
 interface SettingsProps {
     settings: { logo: string | null; defaultMarkers: MarkerValue[] };
@@ -90,6 +90,11 @@ const Settings: React.FC<SettingsProps> = ({ settings, setSettings }) => {
                         Добавить
                     </button>
                 </div>
+            </div>
+
+            {/* 2. Добавляем новый блок с компонентом Updater */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+                <Updater />
             </div>
         </div>
     );
