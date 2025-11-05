@@ -1,0 +1,56 @@
+{
+  "name": "docmaster-contract-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron-dev": "electron .",
+    "electron-build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@google/genai": "^1.27.0",
+    "docx": "^9.5.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  },
+  "build": {
+    "appId": "com.docmaster.app",
+    "productName": "ДокМастер",
+    "copyright": "Copyright © 2024 Your Name or Company",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "main.cjs",
+      "preload.cjs",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "category": "your.app.category.here",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    }
+  }
+}

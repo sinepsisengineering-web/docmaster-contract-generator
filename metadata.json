@@ -1,0 +1,5 @@
+{
+  "name": "DocMaster Contract Generator",
+  "description": "A user-friendly application for quickly creating, editing, and saving various contract templates and their appendices, with auto-filling of key data.",
+  "requestFramePermissions": []
+}
